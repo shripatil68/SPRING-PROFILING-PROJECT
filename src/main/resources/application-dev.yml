@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: springbootwebtutorial
+
+  datasource:
+#    url: jdbc:postgresql://localhost:5432/springprofile
+    url: jdbc:postgresql://localhost:5432/springprofile
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  servlet:
+    context-path: /spring-profile
+  port: 8082
+
+my:
+  variable: dev
+
+#master username - postgres
+#Password in aws db - postgres-1
